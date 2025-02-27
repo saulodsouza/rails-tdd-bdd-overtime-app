@@ -49,6 +49,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "database_cleaner", "~> 2.1"
+
+  gem "rspec-rails", "~> 7.1"
 end
 
 group :development do

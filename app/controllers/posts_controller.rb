@@ -16,8 +16,9 @@ class PostsController < ApplicationController
     @post.user = current_user
 
     if @post.save
-      redirect_to @post
+      redirect_to @post, notice: "Post was successfully created."
     else
+      flash.now[:error] = @post.errors.full_messages.join(", ")
       render :new
     end
   end
@@ -27,7 +28,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to @post, notice: "Post was successfully edited."
     else
       render :edit
     end

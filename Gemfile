@@ -53,6 +53,10 @@ group :development, :test do
   gem "database_cleaner", "~> 2.1"
 
   gem "rspec-rails", "~> 7.1"
+
+  gem "factory_bot_rails", "~> 6.2"
+
+  gem "faker", "~> 3.5", ">= 3.5.1"
 end
 
 group :development do

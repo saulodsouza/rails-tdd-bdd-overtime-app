@@ -18,4 +18,8 @@
      <td class="px-4 py-4 text-sm whitespace-nowrap">
          <%= link_to "Edit", edit_post_path(post), id: "edit_#{post.id}", class: "font-medium text-gray-800 dark:text-white" %>
      </td>
+
+     <td class="px-4 py-4 text-sm whitespace-nowrap">
+         <%= link_to "Delete", post_path(post), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" }, id: "delete_#{post.id}", class: "font-medium text-gray-800 dark:text-white" %>
+     </td>
  </tr>

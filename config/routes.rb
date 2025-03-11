@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :admin_users
+      resources :posts
+      resources :users
+
+      root to: "admin_users#index"
+    end
   resources :posts
   devise_for :users, skip: [ :registrations ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

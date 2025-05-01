@@ -52,7 +52,7 @@ group :development, :test do
 
   gem "database_cleaner", "~> 2.1"
 
-  gem "rspec-rails", "~> 7.1"
+  gem "rspec-rails", "~> 8.0"
 
   gem "factory_bot_rails", "~> 6.2"
 
